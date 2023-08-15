@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { getName, getWelcome } from './cli.js';
 
 const getRandomNumber = () => Math.round(Math.random() * 100);
 
@@ -7,10 +8,9 @@ const getQuestion = (randomNumber) => {
 };
 
 const getLogic = () => {
-  console.log('Welcome to the Brain Games!');
+  getWelcome();
   const answerCount = 3;
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = getName()
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < answerCount; i += 1) {
     const randomNumber = getRandomNumber();
