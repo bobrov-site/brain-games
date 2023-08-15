@@ -1,11 +1,13 @@
-import { getName, getWelcome, getAnswer, getSuccess, getName, getFail, getQuestion } from './cli.js';
+import {
+  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin,
+} from './cli.js';
 
 const getRandomNumber = () => Math.round(Math.random() * 100);
 
 const getLogic = () => {
   getWelcome();
   const answerCount = 3;
-  const name = getName()
+  const name = getName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < answerCount; i += 1) {
     const randomNumber = getRandomNumber();
@@ -15,11 +17,11 @@ const getLogic = () => {
     if ((randomNumber % 2 === 0 && answer === 'yes') || (randomNumber % 2 !== 0 && answer === 'no')) {
       getSuccess();
     } else {
-      getFail();
+      getFail(answer, correctAnswer, name);
       break;
     }
     if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
+      getWin(name);
     }
   }
 };
