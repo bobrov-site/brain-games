@@ -1,3 +1,3 @@
-import getLogic from "../src/logic.js";
+import getLogic from '../src/logic.js';
 
 getLogic();
