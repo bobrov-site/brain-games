@@ -2,7 +2,7 @@ import {
   getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin,
 } from './cli.js';
 
-import { getRandomNumber, getRandomOperator, getRandomExpression, getResultExpression } from './calculation.js';
+import { getRandomNumber, getRandomExpression, getResultExpression } from './calculation.js';
 const getLogic = () => {
   getWelcome();
   const answerCount = 3;
