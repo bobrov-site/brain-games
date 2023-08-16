@@ -4,12 +4,13 @@ import {
 
 import { getRandomNumber, getRandomExpression, getResultExpression } from './calculation.js';
 
+const roundCount = 3
+
 const getEven = () => {
   getWelcome();
-  const answerCount = 3;
   const name = getName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 0; i < answerCount; i += 1) {
+  for (let i = 0; i < roundCount; i += 1) {
     const randomNumber = getRandomNumber();
     getQuestion(randomNumber);
     const answer = getAnswer();
@@ -27,11 +28,10 @@ const getEven = () => {
 };
 
 const getCalc = () => {
-  const answerCount = 3;
   getWelcome();
   const name = getName();
   console.log('What is the result of the expression?');
-  for (let i = 0; i < answerCount; i += 1) {
+  for (let i = 0; i < roundCount; i += 1) {
     const expression = getRandomExpression();
     const question = `${expression[0]} ${expression[1]} ${expression[2]}`;
     getQuestion(question);
