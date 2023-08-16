@@ -33,6 +33,10 @@ const getWin = (name) => {
   console.log(`Congratulations, ${name}!`);
 };
 
+const getGameRule = (rule) => {
+  console.log(rule)
+}
+
 export {
-  getWelcome, getName, getAnswer, getSuccess, getWin, getFail, getQuestion,
+  getWelcome, getName, getAnswer, getSuccess, getWin, getFail, getQuestion, getGameRule
 };
