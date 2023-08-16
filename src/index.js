@@ -3,6 +3,7 @@ import {
 } from './cli.js';
 
 import { getRandomNumber, getRandomExpression, getResultExpression } from './calculation.js';
+
 const getEven = () => {
   getWelcome();
   const answerCount = 3;
@@ -29,18 +30,17 @@ const getCalc = () => {
   const answerCount = 3;
   getWelcome();
   const name = getName();
-  console.log('What is the result of the expression?')
+  console.log('What is the result of the expression?');
   for (let i = 0; i < answerCount; i += 1) {
     const expression = getRandomExpression();
     const question = `${expression[0]} ${expression[1]} ${expression[2]}`;
-    getQuestion(question)
+    getQuestion(question);
     const answer = getAnswer();
     const correctAnswer = getResultExpression(expression);
-    console.log(correctAnswer)
+    console.log(correctAnswer);
     if (Number(answer) === Number(correctAnswer)) {
       getSuccess();
-    }
-    else {
+    } else {
       getFail(answer, correctAnswer, name);
       break;
     }
@@ -48,6 +48,6 @@ const getCalc = () => {
       getWin(name);
     }
   }
-}
+};
 
 export { getEven, getCalc };

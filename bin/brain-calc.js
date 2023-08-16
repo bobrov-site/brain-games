@@ -1,3 +1,3 @@
-import { getCalc } from "../src/index.js";
+import { getCalc } from '../src/index.js';
 
 getCalc();
