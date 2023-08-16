@@ -26,15 +26,28 @@ const getLogic = () => {
 };
 
 const getCalc = () => {
+  const answerCount = 3;
   getWelcome();
   const name = getName();
   console.log('What is the result of the expression?')
-  const expression = getRandomExpression();
-  const question = `${expression[0]} ${expression[1]} ${expression[2]}`;
-  getQuestion(question)
-  const answer = getAnswer();
-  const correctAnswer = getResultExpression(expression);
-  console.log(correctAnswer)
+  for (let i = 0; i < answerCount; i += 1) {
+    const expression = getRandomExpression();
+    const question = `${expression[0]} ${expression[1]} ${expression[2]}`;
+    getQuestion(question)
+    const answer = getAnswer();
+    const correctAnswer = getResultExpression(expression);
+    console.log(correctAnswer)
+    if (Number(answer) === Number(correctAnswer)) {
+      getSuccess();
+    }
+    else {
+      getFail(answer, correctAnswer, name);
+      break;
+    }
+    if (i === 2) {
+      getWin(name);
+    }
+  }
 }
 
 export { getLogic, getCalc };
