@@ -20,7 +20,10 @@ const getResultExpression = (expression) => {
       return firstNumber - secondNumber;
     case '*':
       return firstNumber * secondNumber;
+    default:
+      break;
   }
+  return false;
 };
 
 export {
