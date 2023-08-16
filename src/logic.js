@@ -3,6 +3,17 @@ import {
 } from './cli.js';
 
 const getRandomNumber = () => Math.round(Math.random() * 100);
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[Math.floor(Math.random() * operators.length)];
+}
+
+const getRandomExpression = () => {
+  const firstNumber = getRandomNumber();
+  const operator = getRandomOperator(); 
+  const secondNumber = getRandomNumber();
+  return [firstNumber, operator, secondNumber]
+}
 
 const getLogic = () => {
   getWelcome();
@@ -28,6 +39,14 @@ const getLogic = () => {
 
 const getCalc = () => {
   getWelcome();
+  const name = getName();
+  console.log('What is the result of the expression?')
+  const expression = getRandomExpression();
+  const question = `${expression[0]} ${expression[1]} ${expression[2]}`;
+  getQuestion(question)
+  const answer = getAnswer();
+  const correctAnswer = Number(expression[0]) + expression[1] + Number(expression[2]);
+  console.log(correctAnswer)
 }
 
 export { getLogic, getCalc };
