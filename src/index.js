@@ -9,7 +9,7 @@ const roundCount = 3
 const getEven = () => {
   getWelcome();
   const name = getName();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  getGameRule('Answer "yes" if the number is even, otherwise answer "no".')
   for (let i = 0; i < roundCount; i += 1) {
     const randomNumber = getRandomNumber();
     getQuestion(randomNumber);
@@ -30,7 +30,7 @@ const getEven = () => {
 const getCalc = () => {
   getWelcome();
   const name = getName();
-  console.log('What is the result of the expression?');
+  getGameRule('What is the result of the expression?');
   for (let i = 0; i < roundCount; i += 1) {
     const expression = getRandomExpression();
     const question = `${expression[0]} ${expression[1]} ${expression[2]}`;
@@ -53,7 +53,7 @@ const getCalc = () => {
 const getGcd = () => {
   getWelcome();
   const name = getName();
-  
+  getGameRule('Find the greatest common divisor of given numbers.')
 }
 
 export { getEven, getCalc, getGcd };
