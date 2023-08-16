@@ -1,5 +1,5 @@
 import {
-  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin,
+  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin, getGameRule
 } from './cli.js';
 
 import { getRandomNumber, getRandomExpression, getResultExpression } from './calculation.js';
@@ -50,4 +50,10 @@ const getCalc = () => {
   }
 };
 
-export { getEven, getCalc };
+const getGcd = () => {
+  getWelcome();
+  const name = getName();
+  
+}
+
+export { getEven, getCalc, getGcd };
