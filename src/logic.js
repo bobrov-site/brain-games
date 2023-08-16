@@ -15,6 +15,18 @@ const getRandomExpression = () => {
   return [firstNumber, operator, secondNumber]
 }
 
+const getResultExpression = (expression) => {
+  const [firstNumber, operator, secondNumber] = expression;
+  switch (operator) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+  }
+}
+
 const getLogic = () => {
   getWelcome();
   const answerCount = 3;
@@ -45,7 +57,7 @@ const getCalc = () => {
   const question = `${expression[0]} ${expression[1]} ${expression[2]}`;
   getQuestion(question)
   const answer = getAnswer();
-  const correctAnswer = Number(expression[0]) + expression[1] + Number(expression[2]);
+  const correctAnswer = getResultExpression(expression);
   console.log(correctAnswer)
 }
 
