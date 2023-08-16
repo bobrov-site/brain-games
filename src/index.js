@@ -3,7 +3,7 @@ import {
 } from './cli.js';
 
 import { getRandomNumber, getRandomExpression, getResultExpression } from './calculation.js';
-const getLogic = () => {
+const getEven = () => {
   getWelcome();
   const answerCount = 3;
   const name = getName();
@@ -50,4 +50,4 @@ const getCalc = () => {
   }
 }
 
-export { getLogic, getCalc };
+export { getEven, getCalc };

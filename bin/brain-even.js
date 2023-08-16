@@ -1,3 +1,3 @@
-import { getLogic } from '../src/index.js';
+import { getEven } from '../src/index.js';
 
-getLogic();
+getEven();
