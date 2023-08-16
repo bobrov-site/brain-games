@@ -26,4 +26,8 @@ const getLogic = () => {
   }
 };
 
-export default getLogic;
+const getCalc = () => {
+  getWelcome();
+}
+
+export { getLogic, getCalc };
