@@ -53,5 +53,6 @@ const getResultExpression = (expression) => {
 };
 
 export {
-  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression, getRandomNumbersSameParity, getGcdResult,
+  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
+  getRandomNumbersSameParity, getGcdResult,
 };

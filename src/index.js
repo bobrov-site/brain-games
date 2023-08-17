@@ -3,7 +3,8 @@ import {
 } from './cli.js';
 
 import {
-  getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity, getGcdResult,
+  getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity,
+  getGcdResult,
 } from './calculation.js';
 
 const roundCount = 3;
