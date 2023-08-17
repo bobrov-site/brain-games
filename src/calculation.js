@@ -19,6 +19,14 @@ const getRandomNumbersSameParity = () => {
   numbers.push(firstNumber, secondNumber)
   return numbers
 }
+
+const getGcdResult = (a, b) => {
+  if (b) {
+    return getGcdResult(b, a % b);
+  } else {
+    return Math.abs(a);
+  }
+}
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
@@ -47,5 +55,5 @@ const getResultExpression = (expression) => {
 };
 
 export {
-  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,getRandomNumbersSameParity
+  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression, getRandomNumbersSameParity, getGcdResult
 };
