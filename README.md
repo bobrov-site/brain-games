@@ -6,3 +6,4 @@
 <h2>How to play BRAIN-CALC</h2>
 <a href="https://asciinema.org/a/wkvLHGhMGur9BMiptTkyy4Imo" target="_blank"><img src="https://asciinema.org/a/wkvLHGhMGur9BMiptTkyy4Imo.svg" /></a>
 <h2>How to play BRAIN-GCD</h2>
+<a href="https://asciinema.org/a/1SpG5y3XSz27WeNJS3Okk4jyK" target="_blank"><img src="https://asciinema.org/a/1SpG5y3XSz27WeNJS3Okk4jyK.svg" /></a>
