@@ -1,3 +1,3 @@
-import { getGcd } from "../src/index.js";
+import { getGcd } from '../src/index.js';
 
 getGcd();

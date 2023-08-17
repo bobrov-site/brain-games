@@ -34,9 +34,9 @@ const getWin = (name) => {
 };
 
 const getGameRule = (rule) => {
-  console.log(rule)
-}
+  console.log(rule);
+};
 
 export {
-  getWelcome, getName, getAnswer, getSuccess, getWin, getFail, getQuestion, getGameRule
+  getWelcome, getName, getAnswer, getSuccess, getWin, getFail, getQuestion, getGameRule,
 };

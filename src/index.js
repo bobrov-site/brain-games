@@ -1,15 +1,17 @@
 import {
-  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin, getGameRule
+  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin, getGameRule,
 } from './cli.js';
 
-import { getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity, getGcdResult } from './calculation.js';
+import {
+  getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity, getGcdResult,
+} from './calculation.js';
 
-const roundCount = 3
+const roundCount = 3;
 
 const getEven = () => {
   getWelcome();
   const name = getName();
-  getGameRule('Answer "yes" if the number is even, otherwise answer "no".')
+  getGameRule('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < roundCount; i += 1) {
     const randomNumber = getRandomNumber();
     getQuestion(randomNumber);
@@ -54,16 +56,15 @@ const getGcd = () => {
   const name = getName();
   getGameRule('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < roundCount; i += 1) {
-    const question = getRandomNumbersSameParity()
-    const firstNumber = question[0]
-    const secondNumber = question[1]
-    getQuestion(question)
-    const answer = getAnswer()
-    const correctAnswer = getGcdResult(firstNumber, secondNumber)
+    const question = getRandomNumbersSameParity();
+    const firstNumber = question[0];
+    const secondNumber = question[1];
+    getQuestion(question);
+    const answer = getAnswer();
+    const correctAnswer = getGcdResult(firstNumber, secondNumber);
     if (Number(answer) === Number(correctAnswer)) {
       getSuccess();
-    }
-    else {
+    } else {
       getFail(answer, correctAnswer, name);
       break;
     }
@@ -71,6 +72,6 @@ const getGcd = () => {
       getWin(name);
     }
   }
-}
+};
 
 export { getEven, getCalc, getGcd };
