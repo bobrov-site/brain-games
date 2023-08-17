@@ -6,6 +6,17 @@ const getOddRandomNumber = () => getEvenRandomNumber() + 1
 
 const getRandomNumbersSameParity = () => {
   const numbers = []
+  let firstNumber = 0
+  let secondNumber = 0
+  if (Math.round(Math.random()) === 1) {
+    firstNumber = getEvenRandomNumber()
+    secondNumber = getEvenRandomNumber()
+  }
+  else {
+    firstNumber = getOddRandomNumber()
+    secondNumber = getOddRandomNumber()
+  }
+  numbers.push(firstNumber, secondNumber)
   return numbers
 }
 const getRandomOperator = () => {
