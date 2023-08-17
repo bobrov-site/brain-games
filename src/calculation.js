@@ -72,7 +72,12 @@ const getResultProgression = () => {
   return result
 }
 
+const takeRandomElementFromProgression = (progression) => {
+  const index = getRandomIntervalBetween(0, progression.length - 1);
+  return progression[index]
+}
+
 export {
   getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
-  getRandomNumbersSameParity, getResultGcd, getResultProgression
+  getRandomNumbersSameParity, getResultGcd, getResultProgression, takeRandomElementFromProgression
 };
