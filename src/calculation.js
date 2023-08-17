@@ -1,4 +1,13 @@
 const getRandomNumber = () => Math.round(Math.random() * 100);
+
+const getEvenRandomNumber = () => getRandomNumber() * 2
+
+const getOddRandomNumber = () => getEvenRandomNumber() + 1
+
+const getRandomEvenNumbers = () => {
+  const numbers = []
+  return numbers
+}
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
@@ -27,5 +36,5 @@ const getResultExpression = (expression) => {
 };
 
 export {
-  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
+  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,getRandomEvenNumbers
 };
