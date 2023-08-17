@@ -4,6 +4,10 @@ const getEvenRandomNumber = () => getRandomNumber() * 2;
 
 const getOddRandomNumber = () => getEvenRandomNumber() + 1;
 
+const getRandomIntervalBetween = (min, max) => {
+  return Math.round(Math.random() * (max - min) + min);
+} 
+
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
@@ -52,6 +56,11 @@ const getResultExpression = (expression) => {
   }
   return false;
 };
+
+const getResultProgression = () => {
+  const result = []
+  return result
+}
 
 export {
   getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
