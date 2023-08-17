@@ -61,6 +61,16 @@ const getGcd = () => {
     getQuestion(question)
     const answer = getAnswer()
     const correctAnswer = getGcdResult(firstNumber, secondNumber)
+    if (Number(answer) === Number(correctAnswer)) {
+      getSuccess();
+    }
+    else {
+      getFail(answer, correctAnswer, name);
+      break;
+    }
+    if (i === 2) {
+      getWin(name);
+    }
   }
 }
 
