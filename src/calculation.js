@@ -19,9 +19,9 @@ const getRandomNumbersSameParity = () => {
   return numbers;
 };
 
-const getGcdResult = (a, b) => {
+const getResultGcd = (a, b) => {
   if (b) {
-    return getGcdResult(b, a % b);
+    return getResultGcd(b, a % b);
   }
   return Math.abs(a);
 };
@@ -54,5 +54,5 @@ const getResultExpression = (expression) => {
 
 export {
   getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
-  getRandomNumbersSameParity, getGcdResult,
+  getRandomNumbersSameParity, getResultGcd,
 };

@@ -4,7 +4,7 @@ import {
 
 import {
   getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity,
-  getGcdResult,
+  getResultGcd,
 } from './calculation.js';
 
 const roundCount = 3;
@@ -62,7 +62,7 @@ const getGcd = () => {
     const secondNumber = question[1];
     getQuestion(question);
     const answer = getAnswer();
-    const correctAnswer = getGcdResult(firstNumber, secondNumber);
+    const correctAnswer = getResultGcd(firstNumber, secondNumber);
     if (Number(answer) === Number(correctAnswer)) {
       getSuccess();
     } else {
@@ -80,7 +80,7 @@ const getProgression = () => {
   const name = getName();
   getGameRule('What number is missing in the progression?');
   for (let i = 0; i < roundCount; i += 1) {
-    
+
   }
 }
 
