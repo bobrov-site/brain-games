@@ -4,6 +4,18 @@ const getEvenRandomNumber = () => getRandomNumber() * 2;
 
 const getOddRandomNumber = () => getEvenRandomNumber() + 1;
 
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[Math.floor(Math.random() * operators.length)];
+};
+
+const getRandomExpression = () => {
+  const firstNumber = getRandomNumber();
+  const operator = getRandomOperator();
+  const secondNumber = getRandomNumber();
+  return [firstNumber, operator, secondNumber];
+};
+
 const getRandomNumbersSameParity = () => {
   const numbers = [];
   let firstNumber = 0;
@@ -24,17 +36,6 @@ const getResultGcd = (a, b) => {
     return getResultGcd(b, a % b);
   }
   return Math.abs(a);
-};
-const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  return operators[Math.floor(Math.random() * operators.length)];
-};
-
-const getRandomExpression = () => {
-  const firstNumber = getRandomNumber();
-  const operator = getRandomOperator();
-  const secondNumber = getRandomNumber();
-  return [firstNumber, operator, secondNumber];
 };
 
 const getResultExpression = (expression) => {
