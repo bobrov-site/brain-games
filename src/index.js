@@ -75,4 +75,8 @@ const getGcd = () => {
   }
 };
 
-export { getEven, getCalc, getGcd };
+const getProgression = () => {
+
+}
+
+export { getEven, getCalc, getGcd, getProgression };
