@@ -4,7 +4,7 @@ const getEvenRandomNumber = () => getRandomNumber() * 2
 
 const getOddRandomNumber = () => getEvenRandomNumber() + 1
 
-const getRandomEvenNumbers = () => {
+const getRandomNumbersSameParity = () => {
   const numbers = []
   return numbers
 }
@@ -36,5 +36,5 @@ const getResultExpression = (expression) => {
 };
 
 export {
-  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,getRandomEvenNumbers
+  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,getRandomNumbersSameParity
 };
