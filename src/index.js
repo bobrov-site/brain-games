@@ -37,7 +37,6 @@ const getCalc = () => {
     getQuestion(question);
     const answer = getAnswer();
     const correctAnswer = getResultExpression(expression);
-    console.log(correctAnswer);
     if (Number(answer) === Number(correctAnswer)) {
       getSuccess();
     } else {
