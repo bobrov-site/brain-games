@@ -76,7 +76,12 @@ const getGcd = () => {
 };
 
 const getProgression = () => {
-
+  getWelcome();
+  const name = getName();
+  getGameRule('What number is missing in the progression?');
+  for (let i = 0; i < roundCount; i += 1) {
+    
+  }
 }
 
 export { getEven, getCalc, getGcd, getProgression };
