@@ -59,10 +59,20 @@ const getResultExpression = (expression) => {
 
 const getResultProgression = () => {
   const result = []
+  const arrayLength = getRandomIntervalBetween(5, 10)
+  const firstNumber = getRandomIntervalBetween(1, 20);
+  const randomProgression = getRandomIntervalBetween(1, 10);
+  result.push(firstNumber)
+  for (let i = 1; i < arrayLength; i += 1) {
+    result.push(0)
+  }
+  for (let i = 1; i < arrayLength; i += 1) {
+    result[i] = result[i - 1] + randomProgression
+  }
   return result
 }
 
 export {
   getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
-  getRandomNumbersSameParity, getResultGcd,
+  getRandomNumbersSameParity, getResultGcd, getResultProgression
 };
