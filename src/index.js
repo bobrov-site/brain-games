@@ -2,7 +2,7 @@ import {
   getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin, getGameRule
 } from './cli.js';
 
-import { getRandomNumber, getRandomExpression, getResultExpression } from './calculation.js';
+import { getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity } from './calculation.js';
 
 const roundCount = 3
 
@@ -53,7 +53,11 @@ const getCalc = () => {
 const getGcd = () => {
   getWelcome();
   const name = getName();
-  getGameRule('Find the greatest common divisor of given numbers.')
+  getGameRule('Find the greatest common divisor of given numbers.');
+  for (let i = 0; i < roundCount; i += 1) {
+    const question = getRandomNumbersSameParity()
+    getQuestion(question)
+  }
 }
 
 export { getEven, getCalc, getGcd };
