@@ -59,7 +59,8 @@ const getGcd = () => {
     const firstNumber = question[0]
     const secondNumber = question[1]
     getQuestion(question)
-    const gcdCorrect = getGcdResult(firstNumber, secondNumber)
+    const answer = getAnswer()
+    const correctAnswer = getGcdResult(firstNumber, secondNumber)
   }
 }
 
