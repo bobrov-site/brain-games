@@ -5,7 +5,7 @@ import {
 import {
   getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity,
   getResultGcd, getResultProgression, takeRandomElementFromProgression,
-  removeElementFromProgression, isPrimeNumber
+  removeElementFromProgression, isPrimeNumber,
 } from './calculation.js';
 
 const roundCount = 3;
@@ -103,18 +103,17 @@ const getProgression = () => {
 const getPrime = () => {
   getWelcome();
   const name = getName();
-  getGameRule('Answer "yes" if given number is prime. Otherwise answer "no".')
+  getGameRule('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < roundCount; i += 1) {
     const question = getRandomNumber();
     getQuestion(question);
     const answer = getAnswer();
     const correctAnswer = isPrimeNumber(question);
-    const correctClientAnswer = correctAnswer === true ? 'yes' : 'no'
-    const checkAnswer = answer === 'yes' ? true : false;
+    const correctClientAnswer = correctAnswer === true ? 'yes' : 'no';
+    const checkAnswer = answer === 'yes';
     if (checkAnswer === correctAnswer) {
       getSuccess();
-    }
-    else {
+    } else {
       getFail(answer, correctClientAnswer, name);
       break;
     }
@@ -122,8 +121,8 @@ const getPrime = () => {
       getWin(name);
     }
   }
-}
+};
 
 export {
-  getEven, getCalc, getGcd, getProgression, getPrime
+  getEven, getCalc, getGcd, getProgression, getPrime,
 };

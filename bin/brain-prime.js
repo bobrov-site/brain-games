@@ -1,3 +1,3 @@
-import { getPrime } from "../src/index.js";
+import { getPrime } from '../src/index.js';
 
 getPrime();

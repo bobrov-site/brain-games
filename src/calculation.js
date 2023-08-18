@@ -89,7 +89,7 @@ const removeElementFromProgression = (progression, element) => {
 };
 
 const isPrimeNumber = (number) => {
-  let isPrimeNumber = true
+  let isPrimeNumber = true;
   if (number > 1) {
     for (let i = 2; i < number; i += 1) {
       if (number % i === 0) {
@@ -97,15 +97,14 @@ const isPrimeNumber = (number) => {
         break;
       }
     }
-  }
-  else if (number === 1) {
+  } else if (number === 1) {
     isPrimeNumber = false;
   }
   return isPrimeNumber;
-}
+};
 
 export {
   getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
   getRandomNumbersSameParity, getResultGcd, getResultProgression, takeRandomElementFromProgression,
-  removeElementFromProgression, isPrimeNumber
+  removeElementFromProgression, isPrimeNumber,
 };
