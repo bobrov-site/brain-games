@@ -4,18 +4,12 @@
 <h1>Description</h1>
 <p>Mind Games is a set of five console games. Each game asks questions that need to be answered. The game lasts three rounds and after three correct answers, the game is considered to be completed. Incorrect results end the game and its consequences go through again!</p>
 <h2>Installation</h2>
-1. Clone repository
-```sh
-   git clone https://github.com/bobrov-site/frontend-project-44.git
-```
-2. Install packages
-```sh
-   npm i
-```
-3. Install local packages
-```sh
-   sudo npm link
-```
+<h3>1. Clone repository</h3>
+<p>git clone https://github.com/bobrov-site/frontend-project-44.git</p>
+<h3>2. Install packages</h3>
+<p>npm i</p>
+<h3>3. Install local packages</h3>
+<p>sudo npm link</p>
 <h2>How to play BRAIN-EVEN game</h2>
 <a href="https://asciinema.org/a/q00AJLaji45525uvkxN40gc6N" target="_blank"><img src="https://asciinema.org/a/q00AJLaji45525uvkxN40gc6N.svg" /></a>
 <h2>How to play BRAIN-CALC</h2>
