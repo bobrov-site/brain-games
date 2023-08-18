@@ -4,7 +4,8 @@ import {
 
 import {
   getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity,
-  getResultGcd, getResultProgression, takeRandomElementFromProgression, removeElementFromProgression,
+  getResultGcd, getResultProgression, takeRandomElementFromProgression,
+  removeElementFromProgression,
 } from './calculation.js';
 
 const roundCount = 3;
