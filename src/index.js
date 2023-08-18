@@ -91,7 +91,7 @@ const getProgression = () => {
     const randomElementFromProgression = takeRandomElementFromProgression(progression);
     const correctAnswer = randomElementFromProgression;
     const question = removeElementFromProgression(progression, randomElementFromProgression);
-    getQuestion(question);
+    getQuestion(question.join(' '));
     const answer = getAnswer();
     if (Number(answer) === Number(correctAnswer)) {
       getSuccess();
