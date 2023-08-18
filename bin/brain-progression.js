@@ -1,3 +1,3 @@
-import { getProgression } from "../src/index.js";
+import { getProgression } from '../src/index.js';
 
 getProgression();

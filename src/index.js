@@ -4,7 +4,7 @@ import {
 
 import {
   getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity,
-  getResultGcd, getResultProgression, takeRandomElementFromProgression, removeElementFromProgression
+  getResultGcd, getResultProgression, takeRandomElementFromProgression, removeElementFromProgression,
 } from './calculation.js';
 
 const roundCount = 3;
@@ -82,8 +82,8 @@ const getProgression = () => {
   for (let i = 0; i < roundCount; i += 1) {
     const result = getResultProgression();
     const correctAnswer = result[1];
-    const progression = result[0]
-    const randomElementFromProgression = takeRandomElementFromProgression(progression)
+    const progression = result[0];
+    const randomElementFromProgression = takeRandomElementFromProgression(progression);
     const question = removeElementFromProgression(progression, randomElementFromProgression);
     getQuestion(question);
     const answer = getAnswer();
@@ -97,6 +97,8 @@ const getProgression = () => {
       getWin(name);
     }
   }
-}
+};
 
-export { getEven, getCalc, getGcd, getProgression };
+export {
+  getEven, getCalc, getGcd, getProgression,
+};

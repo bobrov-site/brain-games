@@ -4,9 +4,7 @@ const getEvenRandomNumber = () => getRandomNumber() * 2;
 
 const getOddRandomNumber = () => getEvenRandomNumber() + 1;
 
-const getRandomIntervalBetween = (min, max) => {
-  return Math.round(Math.random() * (max - min) + min);
-} 
+const getRandomIntervalBetween = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -58,41 +56,40 @@ const getResultExpression = (expression) => {
 };
 
 const getResultProgression = () => {
-  const result = []
-  const arrayLength = getRandomIntervalBetween(5, 10)
+  const result = [];
+  const arrayLength = getRandomIntervalBetween(5, 10);
   const firstNumber = getRandomIntervalBetween(1, 20);
   const randomProgression = getRandomIntervalBetween(1, 10);
-  result.push(firstNumber)
+  result.push(firstNumber);
   for (let i = 1; i < arrayLength; i += 1) {
-    result.push(0)
+    result.push(0);
   }
   for (let i = 1; i < arrayLength; i += 1) {
-    result[i] = result[i - 1] + randomProgression
+    result[i] = result[i - 1] + randomProgression;
   }
-  return [result, randomProgression]
-}
+  return [result, randomProgression];
+};
 
 const takeRandomElementFromProgression = (progression) => {
   const index = getRandomIntervalBetween(0, progression.length - 1);
-  return progression[index]
-}
+  return progression[index];
+};
 
 const removeElementFromProgression = (progression, element) => {
-  const clientProgression = []
-  const index = progression.findIndex((el) => el === element)
+  const clientProgression = [];
+  const index = progression.findIndex((el) => el === element);
   for (let i = 0; i < progression.length; i += 1) {
     if (i !== index) {
-      clientProgression.push(progression[i])
-    }
-    else {
-      clientProgression.push('..')
+      clientProgression.push(progression[i]);
+    } else {
+      clientProgression.push('..');
     }
   }
-  return clientProgression
-}
+  return clientProgression;
+};
 
 export {
   getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
   getRandomNumbersSameParity, getResultGcd, getResultProgression, takeRandomElementFromProgression,
-  removeElementFromProgression
+  removeElementFromProgression,
 };
