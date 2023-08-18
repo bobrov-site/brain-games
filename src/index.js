@@ -111,7 +111,6 @@ const getPrime = () => {
     const correctClientAnswer = correctAnswer === true ? 'yes' : 'no';
     const checkAnswer = changeYesOrNoFormatAnswerToBoolean(answer);
     if (checkAnswer === correctAnswer) {
-      console.log(checkAnswer, correctAnswer)
       getSuccess();
     } else {
       getFail(answer, correctClientAnswer, name);
