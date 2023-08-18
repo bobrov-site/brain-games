@@ -89,28 +89,19 @@ const removeElementFromProgression = (progression, element) => {
 };
 
 const isPrimeNumber = (number) => {
-  let isPrime = true
-  if (number === 1) {
-    isPrime = false
-  }
-  else if (number > 1) {
+  let isPrimeNumber = true
+  if (number > 1) {
     for (let i = 2; i < number; i += 1) {
       if (number % i === 0) {
-        isPrime = false;
+        isPrimeNumber = false;
         break;
       }
     }
-    if (isPrime) {
-      isPrime = true
-    }
-    else {
-      isPrime = false
-    }
   }
-  else {
-    isPrime = false
+  else if (number === 1) {
+    isPrimeNumber = false;
   }
-  return isPrime
+  return isPrimeNumber;
 }
 
 export {
