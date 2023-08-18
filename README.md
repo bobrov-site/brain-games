@@ -9,3 +9,5 @@
 <a href="https://asciinema.org/a/1SpG5y3XSz27WeNJS3Okk4jyK" target="_blank"><img src="https://asciinema.org/a/1SpG5y3XSz27WeNJS3Okk4jyK.svg" /></a>
 <h2>How to play BRAIN-PROGRESSION</h2>
 <a href="https://asciinema.org/a/lMSD28kdmMGi7nT3KguDnjsJe" target="_blank"><img src="https://asciinema.org/a/lMSD28kdmMGi7nT3KguDnjsJe.svg" /></a>
+<h2>How to play BRAIN-PRIME</h2>
+<a href="https://asciinema.org/a/bwkrCJo1yBIgXTqnXymDSK8eD" target="_blank"><img src="https://asciinema.org/a/bwkrCJo1yBIgXTqnXymDSK8eD.svg" /></a>
