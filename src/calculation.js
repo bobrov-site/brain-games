@@ -69,7 +69,7 @@ const getResultProgression = () => {
   for (let i = 1; i < arrayLength; i += 1) {
     result[i] = result[i - 1] + randomProgression
   }
-  return result
+  return [result, randomProgression]
 }
 
 const takeRandomElementFromProgression = (progression) => {
