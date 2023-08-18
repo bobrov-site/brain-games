@@ -88,8 +88,33 @@ const removeElementFromProgression = (progression, element) => {
   return clientProgression;
 };
 
+const isPrimeNumber = (number) => {
+  let isPrime = true
+  if (number === 1) {
+    isPrime = false
+  }
+  else if (number > 1) {
+    for (let i = 2; i < number; i += 1) {
+      if (number % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      isPrime = true
+    }
+    else {
+      isPrime = false
+    }
+  }
+  else {
+    isPrime = false
+  }
+  return isPrime
+}
+
 export {
   getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
   getRandomNumbersSameParity, getResultGcd, getResultProgression, takeRandomElementFromProgression,
-  removeElementFromProgression,
+  removeElementFromProgression, isPrimeNumber
 };
