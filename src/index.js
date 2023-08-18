@@ -67,7 +67,7 @@ const getGcd = () => {
     const question = getRandomNumbersSameParity();
     const firstNumber = question[0];
     const secondNumber = question[1];
-    getQuestion(question);
+    getQuestion(`${firstNumber} ${secondNumber}`);
     const answer = getAnswer();
     const correctAnswer = getResultGcd(firstNumber, secondNumber);
     if (Number(answer) === Number(correctAnswer)) {
