@@ -11,6 +11,11 @@ import {
 
 const roundCount = 3;
 
+const getBrainGames = () => {
+  getWelcome();
+  const name = getName();
+}
+
 const getEven = () => {
   getWelcome();
   const name = getName();
@@ -124,5 +129,5 @@ const getPrime = () => {
 };
 
 export {
-  getEven, getCalc, getGcd, getProgression, getPrime,
+  getEven, getCalc, getGcd, getProgression, getPrime, getBrainGames
 };
