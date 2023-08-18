@@ -81,10 +81,9 @@ const getProgression = () => {
   const name = getName();
   getGameRule('What number is missing in the progression?');
   for (let i = 0; i < roundCount; i += 1) {
-    const result = getResultProgression();
-    const correctAnswer = result[1];
-    const progression = result[0];
+    const progression = getResultProgression();
     const randomElementFromProgression = takeRandomElementFromProgression(progression);
+    const correctAnswer = randomElementFromProgression;
     const question = removeElementFromProgression(progression, randomElementFromProgression);
     getQuestion(question);
     const answer = getAnswer();
