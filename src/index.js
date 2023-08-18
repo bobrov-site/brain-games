@@ -1,5 +1,6 @@
 import {
-  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin, getGameRule, changeYesOrNoFormatAnswerToBoolean
+  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin, getGameRule,
+  changeYesOrNoFormatAnswerToBoolean,
 } from './cli.js';
 
 import {
