@@ -13,8 +13,8 @@ const roundCount = 3;
 
 const getBrainGames = () => {
   getWelcome();
-  const name = getName();
-}
+  getName();
+};
 
 const getEven = () => {
   getWelcome();
@@ -129,5 +129,5 @@ const getPrime = () => {
 };
 
 export {
-  getEven, getCalc, getGcd, getProgression, getPrime, getBrainGames
+  getEven, getCalc, getGcd, getProgression, getPrime, getBrainGames,
 };
