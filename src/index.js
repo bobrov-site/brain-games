@@ -4,7 +4,7 @@ import {
 
 import {
   getRandomNumber, getRandomExpression, getResultExpression, getRandomNumbersSameParity,
-  getResultGcd, getResultProgression, takeRandomElementFromProgression
+  getResultGcd, getResultProgression, takeRandomElementFromProgression, removeElementFromProgression
 } from './calculation.js';
 
 const roundCount = 3;
@@ -80,9 +80,22 @@ const getProgression = () => {
   const name = getName();
   getGameRule('What number is missing in the progression?');
   for (let i = 0; i < roundCount; i += 1) {
-    const progression = getResultProgression();
-    const correctAnswer = takeRandomElementFromProgression(progression)
-    console.log(progression, correctAnswer)
+    const result = getResultProgression();
+    const correctAnswer = result[1];
+    const progression = result[0]
+    const randomElementFromProgression = takeRandomElementFromProgression(progression)
+    const question = removeElementFromProgression(progression, randomElementFromProgression);
+    getQuestion(question);
+    const answer = getAnswer();
+    if (Number(answer) === Number(correctAnswer)) {
+      getSuccess();
+    } else {
+      getFail(answer, correctAnswer, name);
+      break;
+    }
+    if (i === 2) {
+      getWin(name);
+    }
   }
 }
 
