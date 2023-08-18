@@ -107,13 +107,15 @@ const getPrime = () => {
   for (let i = 0; i < roundCount; i += 1) {
     const question = getRandomNumber();
     getQuestion(question);
-    const answer = getAnswer() === 'yes' ? 'yes' : 'no';
-    const correctAnswer = isPrimeNumber(answer) === true ? 'yes' : 'no';
-    if (answer === correctAnswer) {
+    const answer = getAnswer();
+    const correctAnswer = isPrimeNumber(question);
+    const correctClientAnswer = correctAnswer === true ? 'yes' : 'no'
+    const checkAnswer = answer === 'yes' ? true : false;
+    if (checkAnswer === correctAnswer) {
       getSuccess();
     }
     else {
-      getFail(answer, correctAnswer, name);
+      getFail(answer, correctClientAnswer, name);
       break;
     }
     if (i === 2) {
