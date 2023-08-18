@@ -22,7 +22,7 @@ const getQuestion = (question) => {
 
 const getFail = (answer, correctAnswer, name) => {
   console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-  console.log(`Let's try again, ${name}`);
+  console.log(`Let's try again, ${name}!`);
 };
 
 const getSuccess = () => {
