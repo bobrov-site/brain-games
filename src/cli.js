@@ -37,6 +37,18 @@ const getGameRule = (rule) => {
   console.log(rule);
 };
 
+const changeYesOrNoFormatAnswerToBoolean = (answer) => {
+  if (answer === 'yes') {
+    return true
+  }
+  else if (answer === 'no') {
+    return false
+  }
+  else {
+    return false
+  }
+}
+
 export {
-  getWelcome, getName, getAnswer, getSuccess, getWin, getFail, getQuestion, getGameRule,
+  getWelcome, getName, getAnswer, getSuccess, getWin, getFail, getQuestion, getGameRule, changeYesOrNoFormatAnswerToBoolean
 };
