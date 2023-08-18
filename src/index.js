@@ -1,5 +1,5 @@
 import {
-  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin, getGameRule,
+  getName, getWelcome, getAnswer, getSuccess, getFail, getQuestion, getWin, getGameRule, changeYesOrNoFormatAnswerToBoolean
 } from './cli.js';
 
 import {
@@ -109,8 +109,9 @@ const getPrime = () => {
     const answer = getAnswer();
     const correctAnswer = isPrimeNumber(question);
     const correctClientAnswer = correctAnswer === true ? 'yes' : 'no';
-    const checkAnswer = answer === 'yes';
+    const checkAnswer = changeYesOrNoFormatAnswerToBoolean(answer);
     if (checkAnswer === correctAnswer) {
+      console.log(checkAnswer, correctAnswer)
       getSuccess();
     } else {
       getFail(answer, correctClientAnswer, name);
