@@ -77,7 +77,22 @@ const takeRandomElementFromProgression = (progression) => {
   return progression[index]
 }
 
+const removeElementFromProgression = (progression, element) => {
+  const clientProgression = []
+  const index = progression.findIndex((el) => el === element)
+  for (let i = 0; i < progression.length; i += 1) {
+    if (i !== index) {
+      clientProgression.push(progression[i])
+    }
+    else {
+      clientProgression.push('..')
+    }
+  }
+  return clientProgression
+}
+
 export {
   getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
-  getRandomNumbersSameParity, getResultGcd, getResultProgression, takeRandomElementFromProgression
+  getRandomNumbersSameParity, getResultGcd, getResultProgression, takeRandomElementFromProgression,
+  removeElementFromProgression
 };
