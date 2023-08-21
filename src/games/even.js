@@ -1,4 +1,5 @@
 import { getWelcome, getGameRule, getQuestion, getAnswer, getSuccess, getFail, getWin } from "../cli.js";
+import { getRandomNumber } from "../calculation.js";
 const runEvenGame = () => {
     getWelcome();
     const name = getName();
