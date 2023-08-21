@@ -1,24 +1,17 @@
-import { getWelcome, getGameRule, getQuestion, getAnswer, getSuccess, getFail, getWin } from "../cli.js";
+import run from "../index.js"
+
 import { getRandomNumber } from "../calculation.js";
+
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+const getQuestionValue = () => {
+    const randomNumber = getRandomNumber();
+    const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
+    return [randomNumber, correctAnswer];
+}
+
 const runEvenGame = () => {
-    getWelcome();
-    const name = getName();
-    getGameRule('Answer "yes" if the number is even, otherwise answer "no".');
-    for (let i = 0; i < roundCount; i += 1) {
-        const randomNumber = getRandomNumber();
-        getQuestion(randomNumber);
-        const answer = getAnswer();
-        const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-        if ((randomNumber % 2 === 0 && answer === 'yes') || (randomNumber % 2 !== 0 && answer === 'no')) {
-            getSuccess();
-        } else {
-            getFail(answer, correctAnswer, name);
-            break;
-        }
-        if (i === 2) {
-            getWin(name);
-        }
-    }
-};
+    run(gameRule, getQuestionValue);
+}
 
 export default runEvenGame
