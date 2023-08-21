@@ -12,15 +12,13 @@ Mind Games is a set of five console games. Each game asks questions that need to
 
 
 # Installation
+
 ## 1. Clone repository
     git clone https://github.com/bobrov-site/frontend-project-44.git
 ## 2. Install packages
     npm i
 ## 3. Install local packages
-    ```
     sudo npm link
-    ```
-
 ## How to play BRAIN-EVEN game (also installation)
 
 <a href="https://asciinema.org/a/q00AJLaji45525uvkxN40gc6N" target="_blank"><img src="https://asciinema.org/a/q00AJLaji45525uvkxN40gc6N.svg" /></a>
