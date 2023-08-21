@@ -16,7 +16,7 @@ const runBrainGames = () => {
   getName();
 };
 
-const getEven = () => {
+const runEvenGame = () => {
   getWelcome();
   const name = getName();
   getGameRule('Answer "yes" if the number is even, otherwise answer "no".');
@@ -129,5 +129,5 @@ const getPrime = () => {
 };
 
 export {
-  getEven, getCalc, getGcd, getProgression, getPrime, runBrainGames,
+  runEvenGame, getCalc, getGcd, getProgression, getPrime, runBrainGames,
 };
