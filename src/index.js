@@ -59,7 +59,7 @@ const runCalcGame = () => {
   }
 };
 
-const getGcd = () => {
+const runGcdGame = () => {
   getWelcome();
   const name = getName();
   getGameRule('Find the greatest common divisor of given numbers.');
@@ -129,5 +129,5 @@ const getPrime = () => {
 };
 
 export {
-  runEvenGame, runCalcGame, getGcd, getProgression, getPrime, runBrainGames,
+  runEvenGame, runCalcGame, runGcdGame, getProgression, getPrime, runBrainGames,
 };
