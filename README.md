@@ -7,9 +7,9 @@
 <p>Mind Games is a set of five console games. Each game asks questions that need to be answered. The game lasts three rounds and after three correct answers, the game is considered to be completed. Incorrect results end the game and its consequences go through again!</p>
 <h2>Installation</h2>
 <h3>1. Clone repository</h3>
-```
-git clone https://github.com/bobrov-site/frontend-project-44.git
-```
+    ```
+    git clone https://github.com/bobrov-site/frontend-project-44.git
+    ```
 <h3>2. Install packages</h3>
 <p>npm i</p>
 <h3>3. Install local packages</h3>
