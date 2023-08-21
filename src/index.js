@@ -105,7 +105,7 @@ const runProgressionGame = () => {
   }
 };
 
-const getPrime = () => {
+const runPrimeGame = () => {
   getWelcome();
   const name = getName();
   getGameRule('Answer "yes" if given number is prime. Otherwise answer "no".');
@@ -129,5 +129,5 @@ const getPrime = () => {
 };
 
 export {
-  runEvenGame, runCalcGame, runGcdGame, runProgressionGame, getPrime, runBrainGames,
+  runEvenGame, runCalcGame, runGcdGame, runProgressionGame, runPrimeGame, runBrainGames,
 };
