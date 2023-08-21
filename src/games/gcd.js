@@ -1,4 +1,4 @@
-import { getWelcome, getGameRule, getQuestion, getAnswer, getSuccess, getFail, getWin } from "../cli";
+import { getWelcome, getGameRule, getQuestion, getAnswer, getSuccess, getFail, getWin } from "../cli.js";
 const runGcdGame = () => {
     getWelcome();
     const name = getName();
