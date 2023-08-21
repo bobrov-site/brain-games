@@ -11,6 +11,11 @@ const getName = () => {
   return name;
 };
 
+const runGreeting = () => {
+  getWelcome();
+  getName();
+};
+
 const getAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
   return answer;
@@ -50,5 +55,5 @@ const changeYesOrNoFormatAnswerToBoolean = (answer) => {
 
 export {
   getWelcome, getName, getAnswer, getSuccess, getWin, getFail, getQuestion, getGameRule,
-  changeYesOrNoFormatAnswerToBoolean,
+  changeYesOrNoFormatAnswerToBoolean, runGreeting
 };

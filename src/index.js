@@ -11,9 +11,4 @@ import {
 
 const roundCount = 3;
 
-const runGreeting = () => {
-  getWelcome();
-  getName();
-};
-
 export { runGreeting };
