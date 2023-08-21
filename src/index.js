@@ -37,7 +37,7 @@ const runEvenGame = () => {
   }
 };
 
-const getCalc = () => {
+const runCalcGame = () => {
   getWelcome();
   const name = getName();
   getGameRule('What is the result of the expression?');
@@ -129,5 +129,5 @@ const getPrime = () => {
 };
 
 export {
-  runEvenGame, getCalc, getGcd, getProgression, getPrime, runBrainGames,
+  runEvenGame, runCalcGame, getGcd, getProgression, getPrime, runBrainGames,
 };
