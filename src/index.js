@@ -82,7 +82,7 @@ const runGcdGame = () => {
   }
 };
 
-const getProgression = () => {
+const runProgressionGame = () => {
   getWelcome();
   const name = getName();
   getGameRule('What number is missing in the progression?');
@@ -129,5 +129,5 @@ const getPrime = () => {
 };
 
 export {
-  runEvenGame, runCalcGame, runGcdGame, getProgression, getPrime, runBrainGames,
+  runEvenGame, runCalcGame, runGcdGame, runProgressionGame, getPrime, runBrainGames,
 };
