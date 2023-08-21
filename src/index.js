@@ -24,4 +24,4 @@ const run = (gameRule, getQuestion) => {
     }
   }
 }
-export default { run };
+export default run
