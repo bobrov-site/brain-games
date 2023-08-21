@@ -11,7 +11,7 @@ import {
 
 const roundCount = 3;
 
-const runBrainGames = () => {
+const runGreeting = () => {
   getWelcome();
   getName();
 };
@@ -129,5 +129,5 @@ const runPrimeGame = () => {
 };
 
 export {
-  runEvenGame, runCalcGame, runGcdGame, runProgressionGame, runPrimeGame, runBrainGames,
+  runEvenGame, runCalcGame, runGcdGame, runProgressionGame, runPrimeGame, runGreeting,
 };
