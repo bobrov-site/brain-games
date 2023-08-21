@@ -1,6 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/bobrov-site/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/bobrov-site/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/bobrov-site/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/18009dfbf4a5c083f135/maintainability" /></a>
+### Required:
+<img src="https://img.shields.io/badge/node-%3E%3D13.2.0-brightgreen"/> <img src="https://img.shields.io/badge/npm-%3E%3D6.3.0-blue"/>
 <h1>Description</h1>
 <p>Mind Games is a set of five console games. Each game asks questions that need to be answered. The game lasts three rounds and after three correct answers, the game is considered to be completed. Incorrect results end the game and its consequences go through again!</p>
 <h2>Installation</h2>
