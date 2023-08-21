@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { getBrainGames } from '../src/index.js';
+import { runBrainGames } from '../src/index.js';
 
-getBrainGames();
+runBrainGames();
