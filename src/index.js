@@ -16,27 +16,6 @@ const runGreeting = () => {
   getName();
 };
 
-const runEvenGame = () => {
-  getWelcome();
-  const name = getName();
-  getGameRule('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 0; i < roundCount; i += 1) {
-    const randomNumber = getRandomNumber();
-    getQuestion(randomNumber);
-    const answer = getAnswer();
-    const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-    if ((randomNumber % 2 === 0 && answer === 'yes') || (randomNumber % 2 !== 0 && answer === 'no')) {
-      getSuccess();
-    } else {
-      getFail(answer, correctAnswer, name);
-      break;
-    }
-    if (i === 2) {
-      getWin(name);
-    }
-  }
-};
-
 const runCalcGame = () => {
   getWelcome();
   const name = getName();
@@ -129,5 +108,5 @@ const runPrimeGame = () => {
 };
 
 export {
-  runEvenGame, runCalcGame, runGcdGame, runProgressionGame, runPrimeGame, runGreeting,
+  runCalcGame, runGcdGame, runProgressionGame, runPrimeGame, runGreeting,
 };
