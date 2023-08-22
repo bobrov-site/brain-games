@@ -1,7 +1,8 @@
 import run from "../index.js";
-import { getRandomIntervalBetween } from "../calculation.js";
 
 const gameRule = 'What number is missing in the progression?'
+
+const getRandomIntervalBetween = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 const getResultProgression = () => {
     const result = [];
