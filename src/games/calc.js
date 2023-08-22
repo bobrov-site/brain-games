@@ -1,4 +1,4 @@
-import { getRandomNumber } from "../utils.js";
+import getRandomNumber from "../utils.js";
 
 import run from "../index.js";
 
