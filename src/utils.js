@@ -5,5 +5,3 @@ const getRandomIntervalBetween = (min, max) => Math.round(Math.random() * (max -
 export {
     getRandomNumber, getRandomIntervalBetween,
 };
-
-/* eslint-disable no-console */
