@@ -1,26 +1,39 @@
-import { getWelcome, getGameRule, getQuestion, getAnswer, getSuccess, getFail, getWin } from "../cli.js";
+import { getRandomNumber } from "../calculation.js";
 
-import { getRandomExpression, getResultExpression } from "../calculation.js";
-const runCalcGame = () => {
-    getWelcome();
-    const name = getName();
-    getGameRule('What is the result of the expression?');
-    for (let i = 0; i < roundCount; i += 1) {
-        const expression = getRandomExpression();
-        const question = `${expression[0]} ${expression[1]} ${expression[2]}`;
-        getQuestion(question);
-        const answer = getAnswer();
-        const correctAnswer = getResultExpression(expression);
-        if (Number(answer) === Number(correctAnswer)) {
-            getSuccess();
-        } else {
-            getFail(answer, correctAnswer, name);
+import run from "../index.js";
+
+const gameRule = 'What is the result of the expression?'
+
+const getResultExpression = (firstNumber, operator, secondNumber) => {
+    switch (operator) {
+        case '+':
+            return firstNumber + secondNumber;
+        case '-':
+            return firstNumber - secondNumber;
+        case '*':
+            return firstNumber * secondNumber;
+        default:
             break;
-        }
-        if (i === 2) {
-            getWin(name);
-        }
     }
+    return false;
 };
+
+const getRandomOperator = () => {
+    const operators = ['+', '-', '*'];
+    return operators[Math.floor(Math.random() * operators.length)];
+}
+
+const getQuestionValue = () => {
+    const firstNumber = getRandomNumber();
+    const operator = getRandomOperator();
+    const secondNumber = getRandomNumber();
+    const question = `${firstNumber} ${operator} ${secondNumber}`;
+    const correctAnswer = getResultExpression(firstNumber, operator, secondNumber)
+    return [question, String(correctAnswer)];
+}
+
+const runCalcGame = () => {
+    run(gameRule, getQuestionValue);
+}
 
 export default runCalcGame
