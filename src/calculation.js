@@ -2,11 +2,6 @@ const getRandomNumber = () => Math.round(Math.random() * 100);
 
 const getRandomIntervalBetween = (min, max) => Math.round(Math.random() * (max - min) + min);
 
-const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  return operators[Math.floor(Math.random() * operators.length)];
-};
-
 const getResultProgression = () => {
   const result = [];
   const arrayLength = getRandomIntervalBetween(5, 10);
@@ -56,6 +51,6 @@ const isPrimeNumber = (number) => {
 };
 
 export {
-  getRandomNumber, getRandomOperator, getResultProgression, takeRandomElementFromProgression,
+  getRandomNumber, getResultProgression, takeRandomElementFromProgression,
   removeElementFromProgression, isPrimeNumber,
 };
