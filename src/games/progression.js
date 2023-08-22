@@ -42,7 +42,6 @@ const getQuestionValue = () => {
     const randomElementFromProgression = takeRandomElementFromProgression(progression);
     const correctAnswer = randomElementFromProgression;
     const question = removeElementFromProgression(progression, randomElementFromProgression);
-    console.log(correctAnswer, 'question')
     return [question.join(' '), String(correctAnswer)]
 }
 
