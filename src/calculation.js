@@ -7,13 +7,6 @@ const getRandomOperator = () => {
   return operators[Math.floor(Math.random() * operators.length)];
 };
 
-const getResultGcd = (a, b) => {
-  if (b) {
-    return getResultGcd(b, a % b);
-  }
-  return Math.abs(a);
-};
-
 const getResultProgression = () => {
   const result = [];
   const arrayLength = getRandomIntervalBetween(5, 10);
@@ -63,6 +56,6 @@ const isPrimeNumber = (number) => {
 };
 
 export {
-  getRandomNumber, getRandomOperator, getResultGcd, getResultProgression, takeRandomElementFromProgression,
+  getRandomNumber, getRandomOperator, getResultProgression, takeRandomElementFromProgression,
   removeElementFromProgression, isPrimeNumber,
 };
