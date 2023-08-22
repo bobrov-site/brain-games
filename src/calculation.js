@@ -1,29 +1,10 @@
 const getRandomNumber = () => Math.round(Math.random() * 100);
 
-const getEvenRandomNumber = () => getRandomNumber() * 2;
-
-const getOddRandomNumber = () => getEvenRandomNumber() + 1;
-
 const getRandomIntervalBetween = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
-};
-
-const getRandomNumbersSameParity = () => {
-  const numbers = [];
-  let firstNumber = 0;
-  let secondNumber = 0;
-  if (Math.round(Math.random()) === 1) {
-    firstNumber = getEvenRandomNumber();
-    secondNumber = getEvenRandomNumber();
-  } else {
-    firstNumber = getOddRandomNumber();
-    secondNumber = getOddRandomNumber();
-  }
-  numbers.push(firstNumber, secondNumber);
-  return numbers;
 };
 
 const getResultGcd = (a, b) => {
@@ -82,7 +63,6 @@ const isPrimeNumber = (number) => {
 };
 
 export {
-  getRandomNumber, getRandomOperator,
-  getRandomNumbersSameParity, getResultGcd, getResultProgression, takeRandomElementFromProgression,
+  getRandomNumber, getRandomOperator, getResultGcd, getResultProgression, takeRandomElementFromProgression,
   removeElementFromProgression, isPrimeNumber,
 };
