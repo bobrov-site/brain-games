@@ -11,13 +11,6 @@ const getRandomOperator = () => {
   return operators[Math.floor(Math.random() * operators.length)];
 };
 
-const getRandomExpression = () => {
-  const firstNumber = getRandomNumber();
-  const operator = getRandomOperator();
-  const secondNumber = getRandomNumber();
-  return [firstNumber, operator, secondNumber];
-};
-
 const getRandomNumbersSameParity = () => {
   const numbers = [];
   let firstNumber = 0;
@@ -38,21 +31,6 @@ const getResultGcd = (a, b) => {
     return getResultGcd(b, a % b);
   }
   return Math.abs(a);
-};
-
-const getResultExpression = (expression) => {
-  const [firstNumber, operator, secondNumber] = expression;
-  switch (operator) {
-    case '+':
-      return firstNumber + secondNumber;
-    case '-':
-      return firstNumber - secondNumber;
-    case '*':
-      return firstNumber * secondNumber;
-    default:
-      break;
-  }
-  return false;
 };
 
 const getResultProgression = () => {
@@ -104,7 +82,7 @@ const isPrimeNumber = (number) => {
 };
 
 export {
-  getRandomNumber, getRandomOperator, getResultExpression, getRandomExpression,
+  getRandomNumber, getRandomOperator,
   getRandomNumbersSameParity, getResultGcd, getResultProgression, takeRandomElementFromProgression,
   removeElementFromProgression, isPrimeNumber,
 };
