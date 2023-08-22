@@ -1,17 +1,17 @@
-import run from "../index.js"
+import run from '../index.js';
 
-import getRandomNumber from "../utils.js";
+import getRandomNumber from '../utils.js';
 
-const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".'
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getQuestionValue = () => {
-    const randomNumber = getRandomNumber();
-    const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-    return [randomNumber, correctAnswer];
-}
+  const randomNumber = getRandomNumber();
+  const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
+  return [randomNumber, correctAnswer];
+};
 
 const runEvenGame = () => {
-    run(gameRule, getQuestionValue);
-}
+  run(gameRule, getQuestionValue);
+};
 
-export default runEvenGame
+export default runEvenGame;
