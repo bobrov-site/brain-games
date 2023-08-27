@@ -19,7 +19,7 @@ const getResultExpression = (number1, operator, number2) => {
 };
 
 const getRandomOperator = () => {
-  return operators[Math.floor(Math.random() * operators.length)];
+  return operators[getRandomNumber(0, operators.length - 1)];
 };
 
 const getQuestionValue = () => {
