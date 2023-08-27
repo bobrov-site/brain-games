@@ -24,9 +24,9 @@ const getRandomOperator = () => {
 };
 
 const getQuestionValue = () => {
-  const firstNumber = getRandomNumber();
+  const firstNumber = getRandomNumber(0, 10);
   const operator = getRandomOperator();
-  const secondNumber = getRandomNumber();
+  const secondNumber = getRandomNumber(0, 10);
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   const correctAnswer = getResultExpression(firstNumber, operator, secondNumber);
   return [question, String(correctAnswer)];
