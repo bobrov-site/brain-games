@@ -3,6 +3,8 @@ import getRandomNumber from '../utils.js';
 
 const gameRule = 'What is the result of the expression?';
 
+const operators = ['+', '-', '*'];
+
 const getResultExpression = (number1, operator, number2) => {
   switch (operator) {
     case '+':
@@ -17,7 +19,6 @@ const getResultExpression = (number1, operator, number2) => {
 };
 
 const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
 };
 
