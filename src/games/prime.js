@@ -19,7 +19,7 @@ const isPrimeNumber = (number) => {
 };
 
 const getRound = () => {
-  const question = getRandomNumber();
+  const question = getRandomNumber(0, 100);
   const correctAnswer = isPrimeNumber(question) === true ? 'yes' : 'no';
   return [question, String(correctAnswer)];
 };
