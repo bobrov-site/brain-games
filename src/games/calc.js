@@ -12,9 +12,8 @@ const getResultExpression = (number1, operator, number2) => {
     case '*':
       return number1 * number2;
     default:
-      break;
+      throw new Error('Ошибка! Добавьте вычисление для оператора!');
   }
-  return false;
 };
 
 const getRandomOperator = () => {
