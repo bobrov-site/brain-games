@@ -1,5 +1,4 @@
 import run from '../index.js';
-
 import getRandomNumber from '../utils.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
