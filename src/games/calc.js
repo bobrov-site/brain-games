@@ -20,7 +20,7 @@ const getResultExpression = (number1, operator, number2) => {
 
 const getRandomOperator = () => operators[getRandomNumber(0, operators.length - 1)];
 
-const getQuestionValue = () => {
+const getRound = () => {
   const number1 = getRandomNumber(0, 10);
   const operator = getRandomOperator();
   const number2 = getRandomNumber(0, 10);
@@ -30,7 +30,7 @@ const getQuestionValue = () => {
 };
 
 const runCalcGame = () => {
-  run(gameRule, getQuestionValue);
+  run(gameRule, getRound);
 };
 
 export default runCalcGame;

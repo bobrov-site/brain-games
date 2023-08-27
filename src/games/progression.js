@@ -36,7 +36,7 @@ const removeElementFromProgression = (progression, element) => {
   return clientProgression;
 };
 
-const getQuestionValue = () => {
+const getRound = () => {
   const progression = getResultProgression();
   const randomElementFromProgression = takeRandomElementFromProgression(progression);
   const correctAnswer = randomElementFromProgression;
@@ -45,6 +45,6 @@ const getQuestionValue = () => {
 };
 
 const runProgressionGame = () => {
-  run(gameRule, getQuestionValue);
+  run(gameRule, getRound);
 };
 export default runProgressionGame;

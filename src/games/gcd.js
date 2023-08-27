@@ -29,7 +29,7 @@ const getResultGcd = (a, b) => {
   return Math.abs(a);
 };
 
-const getQuestionValue = () => {
+const getRound = () => {
   const question = getRandomNumbersSameParity();
   const number1 = question[0];
   const number2 = question[1];
@@ -38,7 +38,7 @@ const getQuestionValue = () => {
 };
 
 const runGcdGame = () => {
-  run(gameRule, getQuestionValue);
+  run(gameRule, getRound);
 };
 
 export default runGcdGame;

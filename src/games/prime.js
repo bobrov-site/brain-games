@@ -18,14 +18,14 @@ const isPrimeNumber = (number) => {
   return isPrime;
 };
 
-const getQuestionValue = () => {
+const getRound = () => {
   const question = getRandomNumber();
   const correctAnswer = isPrimeNumber(question) === true ? 'yes' : 'no';
   return [question, String(correctAnswer)];
 };
 
 const runPrimeGame = () => {
-  run(gameRule, getQuestionValue);
+  run(gameRule, getRound);
 };
 
 export default runPrimeGame;
