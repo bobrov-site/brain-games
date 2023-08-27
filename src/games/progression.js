@@ -1,14 +1,13 @@
 import run from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameRule = 'What number is missing in the progression?';
 
-const getRandomIntervalBetween = (min, max) => Math.round(Math.random() * (max - min) + min);
-
 const getResultProgression = () => {
   const result = [];
-  const arrayLength = getRandomIntervalBetween(5, 10);
-  const firstNumber = getRandomIntervalBetween(1, 20);
-  const randomProgression = getRandomIntervalBetween(1, 10);
+  const arrayLength = getRandomNumber(5, 10);
+  const firstNumber = getRandomNumber(1, 20);
+  const randomProgression = getRandomNumber(3, 10);
   result.push(firstNumber);
   for (let i = 1; i < arrayLength; i += 1) {
     result.push(0);
@@ -20,7 +19,7 @@ const getResultProgression = () => {
 };
 
 const takeRandomElementFromProgression = (progression) => {
-  const index = getRandomIntervalBetween(0, progression.length - 1);
+  const index = getRandomNumber(0, progression.length - 1);
   return progression[index];
 };
 
