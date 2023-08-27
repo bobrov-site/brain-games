@@ -3,14 +3,14 @@ import getRandomNumber from '../utils.js';
 
 const gameRule = 'What is the result of the expression?';
 
-const getResultExpression = (number1, operator, secondNumber) => {
+const getResultExpression = (number1, operator, number2) => {
   switch (operator) {
     case '+':
-      return number1 + secondNumber;
+      return number1 + number2;
     case '-':
-      return number1 - secondNumber;
+      return number1 - number2;
     case '*':
-      return number1 * secondNumber;
+      return number1 * number2;
     default:
       break;
   }
@@ -25,9 +25,9 @@ const getRandomOperator = () => {
 const getQuestionValue = () => {
   const number1 = getRandomNumber(0, 10);
   const operator = getRandomOperator();
-  const secondNumber = getRandomNumber(0, 10);
-  const question = `${number1} ${operator} ${secondNumber}`;
-  const correctAnswer = getResultExpression(number1, operator, secondNumber);
+  const number2 = getRandomNumber(0, 10);
+  const question = `${number1} ${operator} ${number2}`;
+  const correctAnswer = getResultExpression(number1, operator, number2);
   return [question, String(correctAnswer)];
 };
 

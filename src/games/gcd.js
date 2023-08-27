@@ -10,15 +10,15 @@ const getOddRandomNumber = () => getEvenRandomNumber() + 1;
 const getRandomNumbersSameParity = () => {
   const numbers = [];
   let number1 = 0;
-  let secondNumber = 0;
+  let number2 = 0;
   if (Math.round(Math.random()) === 1) {
     number1 = getEvenRandomNumber();
-    secondNumber = getEvenRandomNumber();
+    number2 = getEvenRandomNumber();
   } else {
     number1 = getOddRandomNumber();
-    secondNumber = getOddRandomNumber();
+    number2 = getOddRandomNumber();
   }
-  numbers.push(number1, secondNumber);
+  numbers.push(number1, number2);
   return numbers;
 };
 
@@ -32,9 +32,9 @@ const getResultGcd = (a, b) => {
 const getQuestionValue = () => {
   const question = getRandomNumbersSameParity();
   const number1 = question[0];
-  const secondNumber = question[1];
-  const correctAnswer = getResultGcd(number1, secondNumber);
-  return [`${number1} ${secondNumber}`, String(correctAnswer)];
+  const number2 = question[1];
+  const correctAnswer = getResultGcd(number1, number2);
+  return [`${number1} ${number2}`, String(correctAnswer)];
 };
 
 const runGcdGame = () => {
