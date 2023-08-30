@@ -7,7 +7,7 @@ const getRound = () => {
   const number = getRandomNumber(0, 100);
   const isEven = number => number % 2 === 0;
   const correctAnswer = isEven(number) ? 'yes' : 'no'
-  return [number, correctAnswer];
+  return [String(number), correctAnswer];
 };
 
 const runEvenGame = () => {
