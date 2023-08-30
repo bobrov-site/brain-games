@@ -14,7 +14,7 @@ const getResultExpression = (number1, operator, number2) => {
     case '*':
       return number1 * number2;
     default:
-      throw new Error('Ошибка! Добавьте вычисление для оператора!');
+      throw new Error(`'Ошибка! Добавьте вычисление для оператора!' ${operator}`);
   }
 };
 
