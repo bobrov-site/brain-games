@@ -2,7 +2,6 @@ import run from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const gameRule = 'What is the result of the expression?';
-
 const operators = ['+', '-', '*'];
 
 const getResultExpression = (number1, operator, number2) => {
