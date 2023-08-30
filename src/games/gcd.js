@@ -3,9 +3,9 @@ import getRandomNumber from '../utils.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const getResultGcd = (a, b) => {
+const getGcd = (a, b) => {
   if (b) {
-    return getResultGcd(b, a % b);
+    return getGcd(b, a % b);
   }
   return Math.abs(a);
 };
@@ -13,7 +13,7 @@ const getResultGcd = (a, b) => {
 const getRound = () => {
   const number1 = getRandomNumber(0, 10);
   const number2 = getRandomNumber(0, 10);
-  const correctAnswer = getResultGcd(number1, number2);
+  const correctAnswer = getGcd(number1, number2);
   return [`${number1} ${number2}`, String(correctAnswer)];
 };
 
