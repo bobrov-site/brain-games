@@ -30,9 +30,9 @@ const getResultGcd = (a, b) => {
 };
 
 const getRound = () => {
-  const question = getRandomNumbersSameParity();
-  const number1 = question[0];
-  const number2 = question[1];
+  // const question = getRandomNumbersSameParity();
+  const number1 = getRandomNumber(0, 10);
+  const number2 = getRandomNumber(0, 10);
   const correctAnswer = getResultGcd(number1, number2);
   return [`${number1} ${number2}`, String(correctAnswer)];
 };
