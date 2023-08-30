@@ -3,25 +3,6 @@ import getRandomNumber from '../utils.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const getEvenRandomNumber = () => getRandomNumber(0, 5) * 2;
-
-const getOddRandomNumber = () => getEvenRandomNumber() + 1;
-
-const getRandomNumbersSameParity = () => {
-  const numbers = [];
-  let number1 = 0;
-  let number2 = 0;
-  if (Math.round(Math.random()) === 1) {
-    number1 = getEvenRandomNumber();
-    number2 = getEvenRandomNumber();
-  } else {
-    number1 = getOddRandomNumber();
-    number2 = getOddRandomNumber();
-  }
-  numbers.push(number1, number2);
-  return numbers;
-};
-
 const getResultGcd = (a, b) => {
   if (b) {
     return getResultGcd(b, a % b);
@@ -30,7 +11,6 @@ const getResultGcd = (a, b) => {
 };
 
 const getRound = () => {
-  // const question = getRandomNumbersSameParity();
   const number1 = getRandomNumber(0, 10);
   const number2 = getRandomNumber(0, 10);
   const correctAnswer = getResultGcd(number1, number2);
