@@ -4,7 +4,7 @@ import getRandomNumber from '../utils.js';
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => {
-  if (b) {
+  if (b > 0) {
     return getGcd(b, a % b);
   }
   return Math.abs(a);
