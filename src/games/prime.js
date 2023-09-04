@@ -4,18 +4,17 @@ import getRandomNumber from '../utils.js';
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrimeNumber = (number) => {
-  let isPrime = true;
-  if (number > 1) {
-    for (let i = 2; i < number; i += 1) {
-      if (number % i === 0) {
-        isPrime = false;
-        break;
-      }
-    }
-  } else if (number === 1 || number === 0 || Math.sign(number) === -1) {
-    isPrime = false;
+  if (number < 2) {
+    return false;
   }
-  return isPrime;
+
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 const getRound = () => {
