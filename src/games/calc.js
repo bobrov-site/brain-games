@@ -24,8 +24,8 @@ const getRound = () => {
   const operator = getRandomOperator();
   const number2 = getRandomNumber(0, 10);
   const question = `${number1} ${operator} ${number2}`;
-  const correctAnswer = getResultExpression(number1, operator, number2);
-  return [question, String(correctAnswer)];
+  const correctAnswer = String(getResultExpression(number1, operator, number2));
+  return [question, correctAnswer];
 };
 
 const runCalcGame = () => {
