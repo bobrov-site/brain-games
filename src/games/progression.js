@@ -4,18 +4,18 @@ import getRandomNumber from '../utils.js';
 const gameRule = 'What number is missing in the progression?';
 
 const getProgression = () => {
-  const result = [];
+  const progression = [];
   const lengthProgression = getRandomNumber(10, 10);
   const number1 = getRandomNumber(1, 20);
   const numberOfProgression = getRandomNumber(3, 10);
-  result.push(number1);
+  progression.push(number1);
   for (let i = 1; i < lengthProgression; i += 1) {
-    result.push(0);
+    progression.push(0);
   }
   for (let i = 1; i < lengthProgression; i += 1) {
-    result[i] = result[i - 1] + numberOfProgression;
+    progression[i] = progression[i - 1] + numberOfProgression;
   }
-  return result;
+  return progression;
 };
 
 const takeRandomElementFromProgression = (progression) => {
