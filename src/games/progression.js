@@ -15,23 +15,7 @@ const buildProgression = () => {
   return progression;
 };
 
-const takeRandomElementFromProgression = (progression) => {
-  const index = getRandomNumber(0, progression.length - 1);
-  return progression[index];
-};
-
-const removeElementFromProgression = (progression, element) => {
-  const clientProgression = [];
-  const index = progression.findIndex((el) => el === element);
-  for (let i = 0; i < progression.length; i += 1) {
-    if (i !== index) {
-      clientProgression.push(progression[i]);
-    } else {
-      clientProgression.push('..');
-    }
-  }
-  return clientProgression;
-};
+const getRandomIndex = (progression) => getRandomNumber(0, progression.length - 1);
 
 const getRound = () => {
   const progression = buildProgression();
