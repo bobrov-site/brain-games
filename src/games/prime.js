@@ -18,9 +18,9 @@ const isPrimeNumber = (number) => {
 };
 
 const getRound = () => {
-  const question = getRandomNumber(0, 100);
-  const correctAnswer = isPrimeNumber(question) === true ? 'yes' : 'no';
-  return [String(question), String(correctAnswer)];
+  const number = getRandomNumber(0, 100);
+  const correctAnswer = isPrimeNumber(number) === true ? 'yes' : 'no';
+  return [String(number), String(correctAnswer)];
 };
 
 const runPrimeGame = () => {
