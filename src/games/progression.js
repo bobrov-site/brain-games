@@ -3,7 +3,7 @@ import getRandomNumber from '../utils.js';
 
 const gameRule = 'What number is missing in the progression?';
 
-const getResultProgression = () => {
+const getProgression = () => {
   const result = [];
   const arrayLength = getRandomNumber(5, 10);
   const number1 = getRandomNumber(1, 20);
@@ -37,7 +37,7 @@ const removeElementFromProgression = (progression, element) => {
 };
 
 const getRound = () => {
-  const progression = getResultProgression();
+  const progression = getProgression();
   const randomElementFromProgression = takeRandomElementFromProgression(progression);
   const correctAnswer = randomElementFromProgression;
   const question = removeElementFromProgression(progression, randomElementFromProgression);
