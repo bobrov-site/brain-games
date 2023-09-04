@@ -12,7 +12,7 @@ const isPrimeNumber = (number) => {
         break;
       }
     }
-  } else if (number === 1) {
+  } else if (number === 1 || number === 0 || Math.sign(number) === -1) {
     isPrime = false;
   }
   return isPrime;
