@@ -5,14 +5,14 @@ const gameRule = 'What number is missing in the progression?';
 
 const getProgression = () => {
   const result = [];
-  const arrayLength = getRandomNumber(5, 10);
+  const progressionLength = getRandomNumber(5, 10);
   const number1 = getRandomNumber(1, 20);
   const randomProgression = getRandomNumber(3, 10);
   result.push(number1);
-  for (let i = 1; i < arrayLength; i += 1) {
+  for (let i = 1; i < progressionLength; i += 1) {
     result.push(0);
   }
-  for (let i = 1; i < arrayLength; i += 1) {
+  for (let i = 1; i < progressionLength; i += 1) {
     result[i] = result[i - 1] + randomProgression;
   }
   return result;
