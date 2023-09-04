@@ -7,13 +7,13 @@ const getProgression = () => {
   const progression = [];
   const length = getRandomNumber(10, 10);
   const startNumber = getRandomNumber(1, 20);
-  const numberOfProgression = getRandomNumber(3, 10);
+  const step = getRandomNumber(3, 10);
   progression.push(startNumber);
   for (let i = 1; i < length; i += 1) {
     progression.push(0);
   }
   for (let i = 1; i < length; i += 1) {
-    progression[i] = progression[i - 1] + numberOfProgression;
+    progression[i] = progression[i - 1] + step;
   }
   return progression;
 };
