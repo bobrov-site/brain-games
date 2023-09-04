@@ -6,9 +6,9 @@ const gameRule = 'What number is missing in the progression?';
 const getProgression = () => {
   const progression = [];
   const length = getRandomNumber(10, 10);
-  const number1 = getRandomNumber(1, 20);
+  const startNumber = getRandomNumber(1, 20);
   const numberOfProgression = getRandomNumber(3, 10);
-  progression.push(number1);
+  progression.push(startNumber);
   for (let i = 1; i < length; i += 1) {
     progression.push(0);
   }
