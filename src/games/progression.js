@@ -10,8 +10,7 @@ const buildProgression = () => {
   const length = getRandomNumber(10, 10);
   const startNumber = getRandomNumber(1, 20);
   const step = getRandomNumber(3, 10);
-  progression.push(startNumber);
-  for (let i = 1; i < length; i += 1) {
+  for (let i = 0; i < length; i += 1) {
     progression[i] = startNumber + step * i;
   }
   const randomIndex = getRandomIndex(progression);
