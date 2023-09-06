@@ -10,17 +10,17 @@ const buildProgression = (startNumber, step, length) => {
   for (let i = 0; i < length; i += 1) {
     progression[i] = startNumber + step * i;
   }
-  const randomIndex = getRandomIndex(progression);
-  const randomNumber = progression[randomIndex];
-  progression[randomIndex] = '..';
-  return [progression, randomNumber];
+  return progression
 };
 
 const getRound = () => {
   const length = getRandomNumber(10, 10);
   const startNumber = getRandomNumber(1, 20);
   const step = getRandomNumber(3, 10);
-  const [progression, number] = buildProgression(startNumber, step, length);
+  const progression = buildProgression(startNumber, step, length);
+  const index = getRandomIndex(progression);
+  const number = progression[index];
+  progression[index] = '..';
   const question = progression.join(' ');
   const correctAnswer = String(number);
   return [question, correctAnswer];
