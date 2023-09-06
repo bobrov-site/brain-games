@@ -5,11 +5,8 @@ const gameRule = 'What number is missing in the progression?';
 
 const getRandomIndex = (progression) => getRandomNumber(0, progression.length - 1);
 
-const buildProgression = () => {
+const buildProgression = (startNumber, step, length) => {
   const progression = [];
-  const length = getRandomNumber(10, 10);
-  const startNumber = getRandomNumber(1, 20);
-  const step = getRandomNumber(3, 10);
   for (let i = 0; i < length; i += 1) {
     progression[i] = startNumber + step * i;
   }
@@ -20,7 +17,10 @@ const buildProgression = () => {
 };
 
 const getRound = () => {
-  const [progression, number] = buildProgression();
+  const length = getRandomNumber(10, 10);
+  const startNumber = getRandomNumber(1, 20);
+  const step = getRandomNumber(3, 10);
+  const [progression, number] = buildProgression(startNumber, step, length);
   const question = progression.join(' ');
   const correctAnswer = String(number);
   return [question, correctAnswer];
