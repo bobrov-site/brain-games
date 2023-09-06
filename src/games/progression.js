@@ -10,7 +10,7 @@ const buildProgression = (startNumber, step, length) => {
   for (let i = 0; i < length; i += 1) {
     progression[i] = startNumber + step * i;
   }
-  return progression
+  return progression;
 };
 
 const getRound = () => {
